@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links - Been's Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .links-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .links-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .pagination button {
+      background-color: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      box-shadow: 0 0 5px var(--primary-color);
+      transition: all 0.3s ease;
+    }
+    
+    .pagination button:hover:not(:disabled) {
+      background-color: var(--hover-color);
+    }
+    
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Been's Hub Links</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="links.html">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="links-container">
+    <h2>Useful Links Collection</h2>
+    <p>Click on any link to visit the website</p>
+    
+    <div class="links-list" id="links-container">
+      <!-- Links will be populated by JavaScript -->
+    </div>
+    
+    <div class="pagination">
+      <button id="prev-btn" disabled>Previous</button>
+      <span id="page-info">Page 1 of 1</span>
+      <button id="next-btn">Next</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Been's Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Link data
+    const links = [
+      { title: "1346", url: "https://mathhelp.politechnika-nova.edu.pl/", description: "Mathematics help resources" },
+      { title: "Benrogo", url: "https://ben.is.supersimple.lol/", description: "Ben's simple website" },
+      { title: "Benrogo", url: "https://ben.wants-a.space/", description: "Ben's space website" },
+      { title: "Benrogo", url: "https://ben.is-learning.materialdesign.space/", description: "Ben's material design website" },
+      { title: "NoDiddyDog", url: "https://nodiddydogwasatthediddy.party/", description: "NoDiddyDog site" },
+      { title: "NowGG", url: "https://nowgg.lol", description: "Now GG site" },
+      { title: "1346 dot lol", url: "https://1346-dot-lol.global.ssl.fastly.net/", description: "1346 dot lol fastly" },
+      { title: "71745718", url: "https://71745718.online/", description: "71745718 online" },
+      { title: "Politechnika Nova", url: "https://politechnika-nova.edu.pl/", description: "Politechnika Nova" },
+      { title: "Sunny's Gym", url: "https://sunnysgym.lol", description: "Sunny's Gym LOL" },
+      { title: "Sunny's Gym Shop", url: "https://sunnysgym.shop", description: "Sunny's Gym Shop" },
+      { title: "Sunny's Gym GitHub", url: "https://sunnysgym.github.io", description: "Sunny's Gym GitHub" },
+      { title: "Sunny FastLy", url: "https://sunny.global.ssl.fastly.net", description: "Sunny FastLy" },
+      { title: "Rogo E", url: "https://rogo-e.global.ssl.fastly.net/", description: "Rogo E" },
+      { title: "Rogo F", url: "https://rogo-f.global.ssl.fastly.net/", description: "Rogo F" },
+      { title: "Rogo G", url: "https://rogo-g.global.ssl.fastly.net/", description: "Rogo G" },
+      { title: "Rogo H", url: "https://rogo-h.global.ssl.fastly.net/", description: "Rogo H" },
+      { title: "Rogo I", url: "https://rogo-i.global.ssl.fastly.net/", description: "Rogo I" },
+      { title: "Rogo J", url: "https://rogo-j.global.ssl.fastly.net/", description: "Rogo J" }
+    ];
+    
+    // Pagination variables
+    let currentPage = 1;
+    const linksPerPage = 9;
+    const totalPages = Math.ceil(links.length / linksPerPage);
+    
+    // Elements
+    const linksContainer = document.getElementById('links-container');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const pageInfo = document.getElementById('page-info');
+    
+    // Display links
+    function displayLinks() {
+      // Clear current links
+      linksContainer.innerHTML = '';
+      
+      // Calculate start and end index
+      const startIndex = (currentPage - 1) * linksPerPage;
+      const endIndex = Math.min(startIndex + linksPerPage, links.length);
+      
+      // Display current page links
+      for (let i = startIndex; i < endIndex; i++) {
+        const link = links[i];
+        const linkElement = document.createElement('a');
+        linkElement.href = link.url;
+        linkElement.target = '_blank';
+        linkElement.className = 'link-card';
+        linkElement.textContent = link.title;
+        linkElement.title = link.description;
+        
+        linksContainer.appendChild(linkElement);
+      }
+      
+      // Update pagination info
+      pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+      
+      // Update button states
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        displayLinks();
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        displayLinks();
+      }
+    });
+    
+    // Initial display
+    displayLinks();
+  </script>
+</body>
+</html>
