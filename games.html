@@ -6,93 +6,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games - Been's Hub</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .games-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    .games-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="icon" type="image/jpeg" href="../attached_assets/Untitled Project (3).jpg">
 </head>
 <body>
   <header>
-    <h1>Been's Hub Games</h1>
+    <h1>Been's Hub</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="games.html">Games</a></li>
+        <li><a href="games.html" class="active">Games</a></li>
         <li><a href="links.html">Links</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="games-container">
-    <h2>Game Collection</h2>
-    <p>Click on any game to open it in a new window</p>
-    
-    <div class="games-grid">
-      <div class="game-card">
-        <h3>Retro Bowl</h3>
-        <p>A retro-style American football game</p>
-        <a href="https://retrobowl.global.ssl.fastly.net/" target="_blank" class="button">Play Now</a>
+  <main>
+    <section id="games" class="section">
+      <h2>Games Collection</h2>
+      <div class="game-grid">
+        <div class="game-card">
+          <h3>Retro Bowl</h3>
+          <p>A retro-style American football game</p>
+          <a href="javascript:openGame('Retro Bowl', 'https://retrobowl.global.ssl.fastly.net/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>1v1.LOL</h3>
+          <p>Building battle royale game</p>
+          <a href="javascript:openGame('1v1.LOL', 'https://1v1.lol')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Slope</h3>
+          <p>Fast-paced ball rolling game</p>
+          <a href="javascript:openGame('Slope', 'https://arawn.co.uk/other/games/gamehub/slope')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Subway Surfers</h3>
+          <p>Endless runner game</p>
+          <a href="javascript:openGame('Subway Surfers', 'https://breakium.com/data/g/subway-surfers/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Basketball Stars</h3>
+          <p>Multiplayer basketball game</p>
+          <a href="javascript:openGame('Basketball Stars', 'https://breakium.com/data/g/basketball-stars/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Thirty Dollar Website</h3>
+          <p>Funny interactive website game</p>
+          <a href="javascript:openGame('Thirty Dollar Website', 'https://breakium.com/data/g/thirty-dollar-website/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Twitch Tetris</h3>
+          <p>Classic tetris game</p>
+          <a href="javascript:openGame('Twitch Tetris', 'https://breakium.com/data/g/twitch-tetris/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Basket Random</h3>
+          <p>Silly basketball game</p>
+          <a href="javascript:openGame('Basket Random', 'https://arawn.co.uk/other/games/gamehub/basketrandom/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Moto X3M</h3>
+          <p>Motorcycle stunt game</p>
+          <a href="javascript:openGame('Moto X3M', 'https://arawn.co.uk/other/games/gamehub/motox3m2/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Bit Life</h3>
+          <p>Life simulation game</p>
+          <a href="javascript:openGame('Bit Life', 'https://arawn.co.uk/other/games/gamehub/bitlife')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Tunnel Rush</h3>
+          <p>Fast-paced tunnel game</p>
+          <a href="javascript:openGame('Tunnel Rush', 'https://arawn.co.uk/other/games/gamehub/tunnelrush/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Just Fall</h3>
+          <p>Fall Guys style game</p>
+          <a href="javascript:openGame('Just Fall', 'https://breakium.com/data/g/just-fall/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Rooftop Snipers</h3>
+          <p>Silly shooting game</p>
+          <a href="javascript:openGame('Rooftop Snipers', 'https://breakium.com/data/g/rooftop-snipers/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Cookie Clicker</h3>
+          <p>Addictive clicking game</p>
+          <a href="javascript:openGame('Cookie Clicker', 'https://arawn.co.uk/other/games/gamehub/cookieclicker')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>2048</h3>
+          <p>Number combining puzzle</p>
+          <a href="javascript:openGame('2048', 'https://arawn.co.uk/other/games/gamehub/2048')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Snow Rider 3D</h3>
+          <p>Skiing arcade game</p>
+          <a href="javascript:openGame('Snow Rider 3D', 'https://arawn.co.uk/other/games/gamehub/snowrider3d/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Minecraft</h3>
+          <p>Classic block building game</p>
+          <a href="javascript:openGame('Minecraft', 'https://villade.anythingthat.works/1.8.8/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Soccer Random</h3>
+          <p>Silly soccer game</p>
+          <a href="javascript:openGame('Soccer Random', 'https://breakium.com/data/g/soccer-random/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Duck Life</h3>
+          <p>Duck training game</p>
+          <a href="javascript:openGame('Duck Life', 'https://arawn.co.uk/other/games/gamehub/ducklife')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Duck Life 2</h3>
+          <p>Duck training sequel</p>
+          <a href="javascript:openGame('Duck Life 2', 'https://arawn.co.uk/other/games/gamehub/ducklife2/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Duck Life 3</h3>
+          <p>Duck training third game</p>
+          <a href="javascript:openGame('Duck Life 3', 'https://arawn.co.uk/other/games/gamehub/ducklife3/')" class="button">Play Now</a>
+        </div>
+        <div class="game-card">
+          <h3>Duck Life 4</h3>
+          <p>Duck training fourth game</p>
+          <a href="javascript:openGame('Duck Life 4', 'https://arawn.co.uk/other/games/gamehub/ducklife4/')" class="button">Play Now</a>
+        </div>
       </div>
-      
-      <div class="game-card">
-        <h3>1v1.LOL</h3>
-        <p>Building battle royale game</p>
-        <a href="https://1v1.lol" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Slope</h3>
-        <p>Fast-paced ball rolling game</p>
-        <a href="https://arawn.co.uk/other/games/gamehub/slope" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Subway Surfers</h3>
-        <p>Endless runner game</p>
-        <a href="https://breakium.com/data/g/subway-surfers/" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Basketball Stars</h3>
-        <p>Basketball game</p>
-        <a href="https://breakium.com/data/g/basketball-stars/" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Thirty Dollar Website</h3>
-        <p>Unique experience</p>
-        <a href="https://breakium.com/data/g/thirty-dollar-website/" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Twitch Tetris</h3>
-        <p>Classic Tetris game</p>
-        <a href="https://breakium.com/data/g/twitch-tetris/" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Basket Random</h3>
-        <p>Physics-based basketball game</p>
-        <a href="https://arawn.co.uk/other/games/gamehub/basketrandom/" target="_blank" class="button">Play Now</a>
-      </div>
-      
-      <div class="game-card">
-        <h3>Moto X3M</h3>
-        <p>Motorcycle stunt game</p>
-        <a href="https://arawn.co.uk/other/games/gamehub/motox3m2/" target="_blank" class="button">Play Now</a>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2023 Been's Hub. All rights reserved.</p>
