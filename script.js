@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
       linkElement.href = link.url;
       linkElement.className = 'link-card';
       linkElement.target = '_blank';
-      linkElement.textContent = link.url;
+      linkElement.textContent = link.title;
 
       linksContainer.appendChild(linkElement);
     }
