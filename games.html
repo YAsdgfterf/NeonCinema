@@ -24,6 +24,28 @@
   box-shadow: 0 0 8px #006400; /* Increased glow on hover */
   border-color: #008000; /* Brighter green border on hover */
 }
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #00ff00;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn.active {
+  color: #006400;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.game-card {
+  position: relative;
+}
 </style>
 </head>
 <body>
@@ -33,6 +55,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="games.html" class="active">Games</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
         <li><a href="proxy.html">Proxy</a></li>
         <li><a href="links.html">Links</a></li>
       </ul>
@@ -47,147 +70,176 @@
           <h3>Retro Bowl</h3>
           <p>A retro-style American football game</p>
           <a href="javascript:openGame('Retro Bowl', 'https://retrobowl.global.ssl.fastly.net/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Retro Bowl">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>1v1.LOL</h3>
           <p>Building battle royale game</p>
           <a href="javascript:openGame('1v1.LOL', 'https://1v1.lol')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="1v1.LOL">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Slope</h3>
           <p>Fast-paced ball rolling game</p>
           <a href="javascript:openGame('Slope', 'https://arawn.co.uk/other/games/gamehub/slope')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Slope">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Subway Surfers</h3>
           <p>Endless runner game</p>
           <a href="javascript:openGame('Subway Surfers', 'https://breakium.com/data/g/subway-surfers/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Subway Surfers">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Basketball Stars</h3>
           <p>Multiplayer basketball game</p>
           <a href="javascript:openGame('Basketball Stars', 'https://breakium.com/data/g/basketball-stars/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Basketball Stars">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Thirty Dollar Website</h3>
           <p>Funny interactive website game</p>
           <a href="javascript:openGame('Thirty Dollar Website', 'https://breakium.com/data/g/thirty-dollar-website/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Thirty Dollar Website">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Twitch Tetris</h3>
           <p>Classic tetris game</p>
           <a href="javascript:openGame('Twitch Tetris', 'https://breakium.com/data/g/twitch-tetris/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Twitch Tetris">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Basket Random</h3>
           <p>Silly basketball game</p>
           <a href="javascript:openGame('Basket Random', 'https://arawn.co.uk/other/games/gamehub/basketrandom/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Basket Random">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Moto X3M</h3>
           <p>Motorcycle stunt game</p>
           <a href="javascript:openGame('Moto X3M', 'https://arawn.co.uk/other/games/gamehub/motox3m2/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Moto X3M">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Bit Life</h3>
           <p>Life simulation game</p>
           <a href="javascript:openGame('Bit Life', 'https://arawn.co.uk/other/games/gamehub/bitlife')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Bit Life">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Tunnel Rush</h3>
           <p>Fast-paced tunnel game</p>
           <a href="javascript:openGame('Tunnel Rush', 'https://arawn.co.uk/other/games/gamehub/tunnelrush/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Tunnel Rush">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Just Fall</h3>
           <p>Fall Guys style game</p>
           <a href="javascript:openGame('Just Fall', 'https://breakium.com/data/g/just-fall/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Just Fall">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Rooftop Snipers</h3>
           <p>Silly shooting game</p>
           <a href="javascript:openGame('Rooftop Snipers', 'https://breakium.com/data/g/rooftop-snipers/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Rooftop Snipers">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Cookie Clicker</h3>
           <p>Addictive clicking game</p>
           <a href="javascript:openGame('Cookie Clicker', 'https://arawn.co.uk/other/games/gamehub/cookieclicker')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Cookie Clicker">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>2048</h3>
           <p>Number combining puzzle</p>
           <a href="javascript:openGame('2048', 'https://arawn.co.uk/other/games/gamehub/2048')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="2048">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Snow Rider 3D</h3>
           <p>Skiing arcade game</p>
           <a href="javascript:openGame('Snow Rider 3D', 'https://arawn.co.uk/other/games/gamehub/snowrider3d/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Snow Rider 3D">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Minecraft</h3>
           <p>Classic block building game</p>
           <a href="javascript:openGame('Minecraft', 'https://villade.anythingthat.works/1.8.8/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Minecraft">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Soccer Random</h3>
           <p>Silly soccer game</p>
           <a href="javascript:openGame('Soccer Random', 'https://breakium.com/data/g/soccer-random/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Soccer Random">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Windows 11 Simulator</h3>
           <p>Windows 11 simulation</p>
           <a href="javascript:openGame('Windows 11 Simulator', 'https://breakium.com/data/g/windows-11/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Windows 11 Simulator">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Among Us</h3>
           <p>Multiplayer deduction game</p>
           <a href="javascript:openGame('Among Us', 'https://breakium.com/data/g/among-us/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Among Us">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Paper.io 2</h3>
           <p>Territory conquest game</p>
           <a href="javascript:openGame('Paper.io 2', 'https://paperio.site')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Paper.io 2">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Flappy Bird</h3>
           <p>Classic tapping game</p>
           <a href="javascript:openGame('Flappy Bird', 'https://breakium.com/data/g/flappy-bird/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Flappy Bird">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Krunker Io</h3>
           <p>Fast-paced FPS game</p>
           <a href="javascript:openGame('Krunker Io', 'https://krunker.io/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Krunker Io">&#9733;</button>
         </div>
         <!-- New games added -->
         <div class="game-card">
           <h3>Geometry Dash</h3>
           <p>Rhythm-based platformer game</p>
           <a href="javascript:openGame('Geometry Dash', 'https://geometrydash-lite.io/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Geometry Dash">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Run 3</h3>
           <p>Space running game</p>
           <a href="javascript:openGame('Run 3', 'https://breakium.com/data/g/run-3/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Run 3">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Stack Ball</h3>
           <p>3D ball stacking game</p>
           <a href="javascript:openGame('Stack Ball', 'https://stackball.io/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Stack Ball">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Temple Run 2</h3>
           <p>Endless running adventure</p>
           <a href="javascript:openGame('Temple Run 2', 'https://azgames.io/game/temple-run-2/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Temple Run 2">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Happy Wheels</h3>
           <p>Physics-based obstacle game</p>
           <a href="javascript:openGame('Happy Wheels', 'https://sreekar617.github.io/hw/index.html')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Happy Wheels">&#9733;</button>
         </div>
         <div class="game-card">
           <h3>Crossy Road</h3>
           <p>Road crossing adventure</p>
           <a href="javascript:openGame('Crossy Road', 'https://breakium.com/data/g/crossyroad/')" class="button">Play Now</a>
+          <button class="favorite-btn" data-game="Crossy Road">&#9733;</button>
         </div>
       </div>
     </section>
