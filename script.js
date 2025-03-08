@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Minecraft FR", url: "https://fr.minecraft.id.lv/" }
   ];
 
-  const linksPerPage = 9;
+  const linksPerPage = 15;
   let currentPage = 1;
   const totalPages = Math.ceil(links.length / linksPerPage);
 
