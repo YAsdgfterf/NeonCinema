@@ -8,7 +8,6 @@
   --text-color: #ffffff;
   --shadow-color: rgba(0, 255, 0, 0.3);
   --border-glow: #004d00;
-  --neon-text-color: #000000;
 }
 
 * {
@@ -33,9 +32,8 @@ header {
 header h1 {
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-  -webkit-text-stroke: 1px var(--primary-color);
 }
 
 nav ul {
@@ -46,14 +44,13 @@ nav ul {
 }
 
 nav a {
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   text-decoration: none;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   text-shadow: 0 0 3px var(--primary-color);
-  -webkit-text-stroke: 1px var(--primary-color);
 }
 
 nav a:hover, nav a.active {
@@ -74,9 +71,8 @@ main {
 section h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
-  -webkit-text-stroke: 1px var(--primary-color);
 }
 
 /* Home Page */
@@ -87,9 +83,8 @@ section h2 {
 
 .hero h2 {
   font-size: 2.5rem;
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-  -webkit-text-stroke: 1px var(--primary-color);
   margin-bottom: 1rem;
 }
 
@@ -98,10 +93,9 @@ section h2 {
 }
 
 .hero a {
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   text-decoration: none;
   text-shadow: 0 0 3px var(--primary-color);
-  -webkit-text-stroke: 0.5px var(--primary-color);
 }
 
 .features {
@@ -126,10 +120,9 @@ section h2 {
 }
 
 .feature-card h3 {
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   margin-bottom: 1rem;
   text-shadow: 0 0 3px var(--primary-color);
-  -webkit-text-stroke: 0.5px var(--primary-color);
 }
 
 .feature-card p {
@@ -158,10 +151,9 @@ section h2 {
 }
 
 .game-card h3 {
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   margin-bottom: 0.5rem;
   text-shadow: 0 0 3px var(--primary-color);
-  -webkit-text-stroke: 0.5px var(--primary-color);
 }
 
 .game-card p {
@@ -208,10 +200,9 @@ section h2 {
   display: flex;
   align-items: center;
   min-height: 60px;
-  color: var(--neon-text-color);
+  color: var(--primary-color);
   text-decoration: none;
   text-shadow: 0 0 2px var(--primary-color);
-  -webkit-text-stroke: 0.5px var(--primary-color);
 }
 
 .link-card:hover {
@@ -232,9 +223,7 @@ section h2 {
 }
 
 #pageInfo, #pageInfoBottom {
-  color: var(--neon-text-color);
-  -webkit-text-stroke: 0.5px var(--primary-color);
-  text-shadow: 0 0 2px var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* Footer */
