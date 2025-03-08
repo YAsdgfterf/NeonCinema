@@ -50,7 +50,11 @@ const GAMES = [
   { name: "Stack Ball", url: "https://stackball.io/" },
   { name: "Temple Run 2", url: "https://azgames.io/game/temple-run-2/" },
   { name: "Happy Wheels", url: "https://sreekar617.github.io/hw/index.html" },
-  { name: "Crossy Road", url: "https://breakium.com/data/g/crossyroad/" }
+  { name: "Crossy Road", url: "https://breakium.com/data/g/crossyroad/" },
+  { name: "Brawl Stars", url: "https://gameis.net/7/igra-boks-simulyator-bravo-stars/" },
+  { name: "Roblox", url: "https://nowgg.lol" },
+  { name: "Polytrack", url: "https://joe-the-chicken.github.io/polytrack-clone/" },
+  { name: "Stumble Guys", url: "https://fuzigames.com/play/stumble-guys.html" }
 ];
 
 function getFavorites() {
