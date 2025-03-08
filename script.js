@@ -1,4 +1,60 @@
-localStorage.getItem(FAVORITES_KEY);
+// Game functionality
+function openGame(name, url) {
+  const newWindow = window.open("about:blank", "_blank");
+  if (newWindow) {
+    newWindow.document.write(`
+      <html>
+        <head>
+          <title>${name}</title>
+          <style>
+            body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+            embed { width: 100%; height: 100%; border: none; }
+          </style>
+        </head>
+        <body>
+          <embed src="${url}" style="width: 100vw; height: 100vh;">
+        </body>
+      </html>
+    `);
+  }
+}
+
+// Favorites functionality
+const FAVORITES_KEY = 'favoriteGames';
+const GAMES = [
+  { name: "Retro Bowl", url: "https://retrobowl.global.ssl.fastly.net/" },
+  { name: "1v1.LOL", url: "https://1v1.lol" },
+  { name: "Slope", url: "https://arawn.co.uk/other/games/gamehub/slope" },
+  { name: "Subway Surfers", url: "https://breakium.com/data/g/subway-surfers/" },
+  { name: "Basketball Stars", url: "https://breakium.com/data/g/basketball-stars/" },
+  { name: "Thirty Dollar Website", url: "https://breakium.com/data/g/thirty-dollar-website/" },
+  { name: "Twitch Tetris", url: "https://breakium.com/data/g/twitch-tetris/" },
+  { name: "Basket Random", url: "https://arawn.co.uk/other/games/gamehub/basketrandom/" },
+  { name: "Moto X3M", url: "https://arawn.co.uk/other/games/gamehub/motox3m2/" },
+  { name: "Bit Life", url: "https://arawn.co.uk/other/games/gamehub/bitlife" },
+  { name: "Tunnel Rush", url: "https://arawn.co.uk/other/games/gamehub/tunnelrush/" },
+  { name: "Just Fall", url: "https://breakium.com/data/g/just-fall/" },
+  { name: "Rooftop Snipers", url: "https://breakium.com/data/g/rooftop-snipers/" },
+  { name: "Cookie Clicker", url: "https://arawn.co.uk/other/games/gamehub/cookieclicker" },
+  { name: "2048", url: "https://arawn.co.uk/other/games/gamehub/2048" },
+  { name: "Snow Rider 3D", url: "https://arawn.co.uk/other/games/gamehub/snowrider3d/" },
+  { name: "Minecraft", url: "https://villade.anythingthat.works/1.8.8/" },
+  { name: "Soccer Random", url: "https://breakium.com/data/g/soccer-random/" },
+  { name: "Windows 11 Simulator", url: "https://breakium.com/data/g/windows-11/" },
+  { name: "Among Us", url: "https://breakium.com/data/g/among-us/" },
+  { name: "Paper.io 2", url: "https://paperio.site" },
+  { name: "Flappy Bird", url: "https://breakium.com/data/g/flappy-bird/" },
+  { name: "Krunker Io", url: "https://krunker.io/" },
+  { name: "Geometry Dash", url: "https://geometrydash-lite.io/" },
+  { name: "Run 3", url: "https://breakium.com/data/g/run-3/" },
+  { name: "Stack Ball", url: "https://stackball.io/" },
+  { name: "Temple Run 2", url: "https://azgames.io/game/temple-run-2/" },
+  { name: "Happy Wheels", url: "https://sreekar617.github.io/hw/index.html" },
+  { name: "Crossy Road", url: "https://breakium.com/data/g/crossyroad/" }
+];
+
+function getFavorites() {
+  const favorites = localStorage.getItem(FAVORITES_KEY);
   return favorites ? JSON.parse(favorites) : [];
 }
 
@@ -163,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
       linkElement.href = link.url;
       linkElement.className = 'link-card';
       linkElement.target = '_blank';
-      linkElement.textContent = link.title;
+      linkElement.textContent = link.url;
 
       linksContainer.appendChild(linkElement);
     }
