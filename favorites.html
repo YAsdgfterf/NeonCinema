@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites - Been's Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000000; /* Black background */
+  color: #00ff00; /* Neon green text */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: 2px solid #006400; /* Darker green border */
+  box-shadow: 0 0 5px #004d00; /* Even darker green glow */
+  text-shadow: 0 0 3px #00ff00;
+}
+
+.button:hover {
+  background-color: #1a1a1a; /* Slightly lighter black on hover */
+  box-shadow: 0 0 8px #006400; /* Increased glow on hover */
+  border-color: #008000; /* Brighter green border on hover */
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Been's Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="favorites.html" class="active">Favorites</a></li>
+        <li><a href="proxy.html">Proxy</a></li>
+        <li><a href="links.html">Links</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="favorites" class="section">
+      <h2>Favorite Games</h2>
+      <div id="favorites-grid" class="game-grid">
+        <!-- Favorite games will be populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Been's Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
