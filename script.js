@@ -54,7 +54,7 @@ const GAMES = [
   { name: "Brawl Stars", url: "https://gameis.net/7/igra-boks-simulyator-bravo-stars/" },
   { name: "Roblox", url: "https://nowgg.lol" },
   { name: "Polytrack", url: "https://joe-the-chicken.github.io/polytrack-clone/" },
-  { name: "Stumble Guys", url: "https://fuzigames.com/play/stumble-guys.html" }
+  { name: "Stumble Guys", url: "https://html5.gamemonetize.co/mgrql67564xtfijuhwbaqyyfmbhu7ouu/" }
 ];
 
 function getFavorites() {
