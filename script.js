@@ -62,22 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (document.querySelector('.game-grid')) {
     updateGameDisplay();
   }
-  
-  // Add fullscreen functionality for proxy page
-  const fullscreenBtn = document.getElementById('fullscreenBtn');
-  const proxyEmbed = document.getElementById('proxyEmbed');
-  
-  if (fullscreenBtn && proxyEmbed) {
-    fullscreenBtn.addEventListener('click', function() {
-      if (proxyEmbed.requestFullscreen) {
-        proxyEmbed.requestFullscreen();
-      } else if (proxyEmbed.webkitRequestFullscreen) { /* Safari */
-        proxyEmbed.webkitRequestFullscreen();
-      } else if (proxyEmbed.msRequestFullscreen) { /* IE11 */
-        proxyEmbed.msRequestFullscreen();
-      }
-    });
-  }
 
   // Only run this code on the links page
   if (!document.getElementById('links-container')) return;
