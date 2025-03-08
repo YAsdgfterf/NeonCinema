@@ -1,4 +1,4 @@
-<!DOCTYPE html>  /* This is a comment */ 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,8 +37,10 @@
   <main>
     <section id="proxy" class="section">
       <div style="position: relative;">
-        <button onclick="openFullscreen('Proxy', 'https://szvy.lol')" class="button" style="position: absolute; top: 10px; left: 10px; z-index: 100;">Fullscreen</button>
-        <embed src="https://szvy.lol" style="width: 100%; height: calc(100vh - 200px);">
+        <form id="uv-form">
+          <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden" />
+          <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input" />
+        </form>
       </div>
     </section>
   </main>
@@ -46,7 +48,11 @@
   <footer>
     <p>&copy; 2025 Been's Hub. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
+      <script src="static/uv/uv.bundle.js" defer></script>
+      <script src="static/uv/uv.config.js" defer></script>
+      <script src="static/register-sw.js" defer></script>
+      <script src="static/search.js" defer></script>
+      <script src="static/index.js" defer></script>
+      <script src="script.js"></script>
 </body>
 </html>
