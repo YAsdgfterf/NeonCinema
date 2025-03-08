@@ -1,6 +1,7 @@
-
 :root {
   --primary-color: #00ff00;
+  --button-bg: #006400;
+  --button-hover: #004d00;
   --hover-color: rgba(0, 255, 0, 0.2);
   --bg-color: #000000;
   --card-bg: #0a0a0a;
@@ -77,11 +78,6 @@ section h2 {
 .hero {
   text-align: center;
   margin-bottom: 3rem;
-}
-
-.hero img.logo {
-  max-width: 300px;
-  margin-bottom: 1.5rem;
 }
 
 .hero h2 {
@@ -165,21 +161,20 @@ section h2 {
 
 .button {
   display: inline-block;
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 0 5px var(--shadow-color);
   text-decoration: none;
   cursor: pointer;
   text-shadow: 0 0 2px var(--primary-color);
 }
 
 .button:hover {
-  background-color: var(--hover-color);
+  background-color: var(--button-hover);
 }
 
 /* Links Section */
@@ -243,11 +238,11 @@ footer {
     align-items: center;
     gap: 1rem;
   }
-  
+
   .game-grid, .links-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .features {
     grid-template-columns: 1fr;
   }
