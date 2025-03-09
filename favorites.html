@@ -57,11 +57,17 @@
   <script>
      document.addEventListener('DOMContentLoaded', () => {
       const favoritesGrid = document.getElementById('favorites-grid');
-      const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+           const allGameCards = document.querySelectorAll('.game-card');
 
+      allGameCards.forEach(card => {
+        const game = card.querySelector('.favorite-btn').getAttribute('data-game');
+        card.style.display = 'none'; // Hide all cards initially
+        favoritesGrid.appendChild(card.cloneNode(true)); // Clone and append to favorites grid
+      });
+       const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
       favorites.forEach(game => {
-        const gameCard = document.querySelector(`.game-card [data-game="${game}"]`).parentElement.cloneNode(true);
-        favoritesGrid.appendChild(gameCard);
+         const gameCard = favoritesGrid.querySelector(`.game-card [data-game="${game}"]`).parentElement;
+        gameCard.style.display = 'block'; // Show only favorited games
       });
     });
   </script>
