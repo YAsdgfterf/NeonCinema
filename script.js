@@ -79,6 +79,24 @@ function toggleFavorite(gameName) {
 
   localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));
   updateGameDisplay();
+updateFavoritesTab(); // Ensure favorites tab is updated
+}
+
+function updateFavoritesTab() {
+  const favoritesGrid = document.getElementById('favorites-grid');
+  if (!favoritesGrid) return;
+
+  const favorites = getFavorites();
+  const allGameCards = document.querySelectorAll('.game-card');
+
+  allGameCards.forEach(card => {
+    const game = card.querySelector('.favorite-btn').getAttribute('data-game');
+    if (favorites.includes(game)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  })
 }
 
 function createGameCard(game, isFavorite) {
