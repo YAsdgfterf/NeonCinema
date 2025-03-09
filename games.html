@@ -291,6 +291,7 @@
           }
 
           localStorage.setItem('favorites', JSON.stringify(favorites));
+       updateFavoritesTab(); 
         });
 
         const game = button.getAttribute('data-game');
@@ -300,6 +301,19 @@
         }
       });
     });
+
+    function updateFavoritesTab() {
+      const favoritesGrid = document.getElementById('favorites-grid');
+      if (!favoritesGrid) return;
+
+      const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+      favoritesGrid.innerHTML = '';
+
+      favorites.forEach(game => {
+        const gameCard = document.querySelector(`.game-card [data-game="${game}"]`).parentElement.cloneNode(true);
+        favoritesGrid.appendChild(gameCard);
+      });
+    }
   </script>
 </body>
 </html>
