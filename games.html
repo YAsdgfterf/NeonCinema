@@ -273,6 +273,33 @@
     <p>&copy; 2024 Been's Hub. All rights reserved.</p>
   </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const favoriteButtons = document.querySelectorAll('.favorite-btn');
 
+      favoriteButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const game = button.getAttribute('data-game');
+          let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+          if (favorites.includes(game)) {
+            favorites = favorites.filter(fav => fav !== game);
+            button.classList.remove('active');
+          } else {
+            favorites.push(game);
+            button.classList.add('active');
+          }
+
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+        });
+
+        const game = button.getAttribute('data-game');
+        const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        if (favorites.includes(game)) {
+          button.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
