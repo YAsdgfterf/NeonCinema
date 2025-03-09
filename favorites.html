@@ -46,6 +46,7 @@
       <div id="favorites-grid" class="game-grid">
         <!-- Favorite games will be populated by JavaScript -->
       </div>
+          <button class="button" id="add-favorite">Add Favorite</button>
     </section>
   </main>
 
@@ -54,5 +55,11 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById('add-favorite').addEventListener('click', function() {
+      alert('Add favorite button clicked!');
+      // Add your logic to handle the button click here
+    });
+  </script>
 </body>
 </html>
