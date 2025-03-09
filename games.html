@@ -308,11 +308,15 @@
       if (!favoritesGrid) return;
 
       const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-      favoritesGrid.innerHTML = '';
+       const allGameCards = document.querySelectorAll('.game-card');
 
-      favorites.forEach(game => {
-        const gameCard = document.querySelector(`.game-card [data-game="${game}"]`).parentElement.cloneNode(true);
-        favoritesGrid.appendChild(gameCard);
+      allGameCards.forEach(card => {
+        const game = card.querySelector('.favorite-btn').getAttribute('data-game');
+        if (favorites.includes(game)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
       });
     }
   </script>
