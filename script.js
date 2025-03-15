@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
   { title: "Pete Zah", url: "https://petezah.netlify.app/" },
   { title: "Pete Zah", url: "https://petezah.global.ssl.fastly.net/" },
   { title: "Pete Zah", url: "https://petezahgames9.web.app/" },
-  { title: "Pete Zah", url: "https://petezahgames10.web.app/" },
+  { title: "Pete Zah", url: "https://petezahgames10.web.app/" }
   ];
 
   const linksPerPage = 15;
