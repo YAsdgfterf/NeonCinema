@@ -104,7 +104,15 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "The Leaker", url: "https://theremightbealeaker.teamoptimization.com/" },
     { title: "Here Again", url: "https://hereagain.decresenzo.com/" },
     { title: "Rayvon Party", url: "https://rayvon.was-at-the-diddy.party/" },
-    { title: "Minecraft FR", url: "https://fr.minecraft.id.lv/" }
+    { title: "Minecraft FR", url: "https://fr.minecraft.id.lv/" },
+    { title: "Pete Zah", url: "https://petezahgames.com/" },
+  { title: "Pete Zah", url: "https://supergisfire.com/" },
+  { title: "Pete Zah", url: "https://petezahlowtaper.web.app/" },
+  { title: "Pete Zah", url: "https://petezahgames8.web.app/" },
+  { title: "Pete Zah", url: "https://petezah.netlify.app/" },
+  { title: "Pete Zah", url: "https://petezah.global.ssl.fastly.net/" },
+  { title: "Pete Zah", url: "https://petezahgames9.web.app/" },
+  { title: "Pete Zah", url: "https://petezahgames10.web.app/" },
   ];
 
   const linksPerPage = 15;
