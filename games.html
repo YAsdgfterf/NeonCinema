@@ -11,17 +11,21 @@
       text-align: center;
       margin: 20px;
       width: 200px;
+      height: 300px; /* Set a fixed height for each game card */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background-color: #1a1a1a; /* Background color for the card */
+      border-radius: 10px; /* Optional rounded corners */
     }
 
     .game-card img {
       width: 100%;
-      border-radius: 5px;
+      height: 150px; /* Set a fixed height for the image */
+      object-fit: cover; /* Ensures the image fits the container without stretching */
+      border-radius: 5px 5px 0 0; /* Rounded corners on top of the image */
       cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .game-card img:hover {
-      transform: scale(1.05); /* Slight zoom effect on hover */
     }
 
     .game-name {
@@ -30,6 +34,9 @@
       color: #00ff00; /* Neon green text */
       font-weight: bold;
       text-shadow: 0 0 5px #00ff00; /* Neon green glow effect on text */
+      overflow: hidden;
+      text-overflow: ellipsis; /* Handles long game names with ellipsis */
+      white-space: nowrap; /* Prevents text from wrapping */
     }
 
     .game-grid {
@@ -233,8 +240,8 @@
         </div>
         <div class="game-card">
           <a href="/games/stickmanhook/">
-            <img src="images/stickmanhook.jpg" alt="Stick man hook">
-            <div class="game-name">Stick man hook</div>
+            <img src="images/stickmanhook.jpg" alt="Stickman Hook">
+            <div class="game-name">Stickman Hook</div>
           </a>
         </div>
         <div class="game-card">
@@ -265,7 +272,7 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // ...existing code...
+      // Existing code...
     });
   </script>
 </body>
