@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Discord Username</title>
+    <!-- Bootstrap Replit Dark Theme -->
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container text-center">
+        <div class="game-container">
+            <h1 class="display-4 mb-4">Enter Your Name</h1>
+            <form method="POST" action="{{ url_for('index') }}" class="mb-4">
+                <div class="mb-3">
+                    <input type="text" 
+                           name="discord_username" 
+                           class="form-control form-control-lg" 
+                           placeholder="Enter your name" 
+                           required>
+                </div>
+                <button type="submit" class="btn btn-info btn-lg">Start Game</button>
+            </form>
+            {% if error %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

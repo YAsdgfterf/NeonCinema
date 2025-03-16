@@ -1,0 +1,49 @@
+.doxxed-text {
+    font-weight: 700;
+    color: var(--bs-danger);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.message-container {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--bs-dark);
+    box-shadow: 0 0 20px rgba(var(--bs-danger-rgb), 0.2);
+}
+
+.game-container {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--bs-dark);
+    box-shadow: 0 0 20px rgba(var(--bs-info-rgb), 0.2);
+}
+
+#gameCanvas {
+    border: 2px solid var(--bs-info);
+    background-color: var(--bs-dark);
+    box-shadow: 0 0 10px rgba(var(--bs-info-rgb), 0.3);
+}
+
+.display-4 {
+    color: var(--bs-info);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-family: monospace;
+}
