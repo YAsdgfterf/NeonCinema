@@ -7,28 +7,43 @@
   <title>Games - Been's Hub</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #000000; /* Black background */
-  color: #00ff00; /* Neon green text */
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  border: 2px solid #006400; /* Darker green border */
-  box-shadow: 0 0 5px #004d00; /* Even darker green glow */
-  text-shadow: 0 0 3px #00ff00;
-}
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000000; /* Black background */
+      color: #00ff00; /* Neon green text */
+      text-decoration: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      border: 2px solid #006400; /* Darker green border */
+      box-shadow: 0 0 5px #004d00; /* Even darker green glow */
+      text-shadow: 0 0 3px #00ff00;
+    }
 
-.button:hover {
-  background-color: #1a1a1a; /* Slightly lighter black on hover */
-  box-shadow: 0 0 8px #006400; /* Increased glow on hover */
-  border-color: #008000; /* Brighter green border on hover */
-}
+    .button:hover {
+      background-color: #1a1a1a; /* Slightly lighter black on hover */
+      box-shadow: 0 0 8px #006400; /* Increased glow on hover */
+      border-color: #008000; /* Brighter green border on hover */
+    }
 
-.game-card {
-  position: relative;
-}
+    .game-card {
+      position: relative;
+      width: 200px;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .game-card img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
@@ -49,169 +64,136 @@
       <h2>Games Collection</h2>
       <div class="game-grid">
         <div class="game-card">
-          <h3>Retro Bowl</h3>
-          <p>A retro-style American football game</p>
+          <img src="images/retro-bowl.jpg" alt="Retro Bowl">
           <a href="/games/retro-bowl/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>1v1.LOL</h3>
-          <p>Building battle royale game</p>
+          <img src="images/1v1lol.jpg" alt="1v1.LOL">
           <a href="/games/1v1lol/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Slope</h3>
-          <p>Fast-paced ball rolling game</p>
+          <img src="images/slope.jpg" alt="Slope">
           <a href="/games/Slope" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Subway Surfers</h3>
-          <p>Endless runner game</p>
+          <img src="images/subway-surfers.jpg" alt="Subway Surfers">
           <a href="/games/subwaysurfers/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Basketball Stars</h3>
-          <p>Multiplayer basketball game</p>
+          <img src="images/basketball-stars.jpg" alt="Basketball Stars">
           <a href="/games/basketball-stars/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Drive Mad</h3>
-          <p>Funny driving game </p>
+          <img src="images/drive-mad.jpg" alt="Drive Mad">
           <a href="/games/drive-mad/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Death Run 3D</h3>
-          <p>Death Run</p>
+          <img src="images/death-run-3d.jpg" alt="Death Run 3D">
           <a href="/games/death-run-3d/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Basket Random</h3>
-          <p>Silly basketball game</p>
+          <img src="images/basket-random.jpg" alt="Basket Random">
           <a href="/games/Basket-Random/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Moto X3M</h3>
-          <p>Motorcycle stunt game</p>
+          <img src="images/motox3m.jpg" alt="Moto X3M">
           <a href="/games/motox3m2/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Bit Life</h3>
-          <p>Life simulation game</p>
+          <img src="images/bitlife.jpg" alt="Bit Life">
           <a href="/games/bitlife/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Getaway shootout</h3>
-          <p>Get Away</p>
+          <img src="images/getaway-shootout.jpg" alt="Getaway Shootout">
           <a href="/games/GetawayShootout/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Just Fall</h3>
-          <p>Fall Guys style game</p>
+          <img src="images/justfall-lol.jpg" alt="Just Fall">
           <a href="/games/justfall-lol/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Rooftop Snipers</h3>
-          <p>Silly shooting game</p>
+          <img src="images/rooftop-snipers.jpg" alt="Rooftop Snipers">
           <a href="/games/rooftop-snipers" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Cookie Clicker</h3>
-          <p>Addictive clicking game</p>
+          <img src="images/cookie-clicker.jpg" alt="Cookie Clicker">
           <a href="/games/CookieClicker/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>2048</h3>
-          <p>Number combining puzzle</p>
+          <img src="images/2048.jpg" alt="2048">
           <a href="/games/2048" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Snow Rider 3D</h3>
-          <p>Skiing arcade game</p>
+          <img src="images/snow-rider3d.jpg" alt="Snow Rider 3D">
           <a href="/games/Snow-Rider3D-main/" class="button" target="_blank">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Minecraft</h3>
-          <p>Classic block building game</p>
+          <img src="images/minecraft.jpg" alt="Minecraft">
           <a href="/games/minecraft-precision-client/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Learn To Fly 2</h3>
-          <p>Launch A Penguin</p>
+          <img src="images/learn-to-fly-2.jpg" alt="Learn To Fly 2">
           <a href="/games/learn-to-fly-2/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Idle Mining Empire</h3>
-          <p>Idle Mining</p>
+          <img src="images/idle-mining-empire.jpg" alt="Idle Mining Empire">
           <a href="/games/idle-mining-empire/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Among Us</h3>
-          <p>Multiplayer deduction game</p>
+          <img src="images/among-us.jpg" alt="Among Us">
           <a href="/games/among-us/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Paper.io 2</h3>
-          <p>Territory conquest game</p>
+          <img src="images/paper-io-2.jpg" alt="Paper.io 2">
           <a href="/games/paper-io-2/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Flappy Bird</h3>
-          <p>Classic tapping game</p>
+          <img src="images/flappy-bird.jpg" alt="Flappy Bird">
           <a href="/games/flappybird/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Krunker Io</h3>
-          <p>Fast-paced FPS game</p>
+          <img src="images/krunker.jpg" alt="Krunker Io">
           <a href="/games/krunker/" class="button">Play Now</a>
         </div>
         <!-- New games added -->
         <div class="game-card">
-          <h3>Geometry Dash</h3>
-          <p>Rhythm-based platformer game</p>
+          <img src="images/geometry-dash.jpg" alt="Geometry Dash">
           <a href="/games/geometry-dash-knockoff/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>baldis basics3</h3>
-          <p>Esacpe the evil teacher</p>
+          <img src="images/baldis-basics.jpg" alt="Baldi's Basics">
           <a href="/games/baldis-basics/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Super Hot</h3>
-          <p>shooter game</p>
+          <img src="images/superhot.jpg" alt="Super Hot">
           <a href="/games/superhot/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Temple Run 2</h3>
-          <p>Endless running adventure</p>
+          <img src="images/temple-run-2.jpg" alt="Temple Run 2">
           <a href="/games/temple-run-2/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Happy Wheels</h3>
-          <p>Physics-based obstacle game</p>
+          <img src="images/happy-wheels.jpg" alt="Happy Wheels">
           <a href="/games/happy-wheels/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Crossy Road</h3>
-          <p>Road crossing adventure</p>
+          <img src="images/crossy-road.jpg" alt="Crossy Road">
           <a href="/games/crossyroad/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Stick man hook</h3>
-          <p>Swing Your Way To Victory</p>
+          <img src="images/stickmanhook.jpg" alt="Stick man hook">
           <a href="/games/stickmanhook/" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Tag</h3>
-          <p>2 player game</p>
+          <img src="images/tag.jpg" alt="Tag">
           <a href="/games/Tag" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Polytrack</h3>
-          <p>Racing game</p>
+          <img src="images/polytrack.jpg" alt="Polytrack">
           <a href="/games/Poly-track" class="button">Play Now</a>
         </div>
         <div class="game-card">
-          <h3>Tetris</h3>
-          <p>Retro Tetris</p>
+          <img src="images/tetris.jpg" alt="Tetris">
           <a href="/games/tetris/" class="button">Play Now</a>
         </div>
       </div>
