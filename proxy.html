@@ -1,29 +1,50 @@
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-thx to @bryce2372 on discord 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proxy - Been's Hub</title>
+  <title>Partners - Been's Hub</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #006400; /* Darker green */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
 
-.button:hover {
-  background-color: #004d00; /* Even darker on hover */
-}
-</style>
+    .partner-card {
+      background-color: var(--card-bg);
+      border: 2px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 0 5px var(--shadow-color);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+    }
+
+    .partner-card a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .partner-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      transition: transform 0.3s ease;
+    }
+
+    .partner-card:hover img {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -32,32 +53,38 @@ thx to @bryce2372 on discord
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="games.html">Games</a></li>
-        <li><a href="proxy.html" class="active">Proxy</a></li>
+        <li><a href="proxy.html">Proxy</a></li>
         <li><a href="links.html">Links</a></li>
-        <li><a href="partners.html">Partners</a></li>
+        <li><a href="partners.html" class="active">Partners</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="proxy" class="section">
-      <div style="position: relative;">
-        <form id="uv-form">
-          <input id="uv-search-engine" value="https://duckduckgo.com/?t=h_&q=%s&ia=web" type="hidden" />
-          <input id="uv-address" type="text" placeholder="Search Google or type an URL" class="form__input" />
-        </form>
+    <section id="partners" class="section">
+      <h2>Our Partners</h2>
+      <div class="partner-grid">
+        <div class="partner-card">
+          <a href="https://dashboard.fluxus.org/" target="_blank">
+            <img src="images/vortex.png" alt="Partner 1">
+          </a>
+        </div>
+        <div class="partner-card">
+          <a href="https://lupine.red" target="_blank">
+            <img src="images/logo.svg" alt="Partner 2">
+          </a>
+        </div>
+        <div class="partner-card">
+          <a href="https://gtube.com" target="_blank">
+            <img src="images/gtube.png" alt="Partner 3">
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Been's Hub. All rights reserved.</p>
+    <p>&copy; 2024 Been's Hub. All rights reserved.</p>
   </footer>
-      <script src="static/uv/uv.bundle.js" defer></script>
-      <script src="static/uv/uv.config.js" defer></script>
-      <script src="static/register-sw.js" defer></script>
-      <script src="static/search.js" defer></script>
-      <script src="static/index.js" defer></script>
-      <script src="script.js"></script>
 </body>
 </html>
