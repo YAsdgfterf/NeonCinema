@@ -1,60 +1,59 @@
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466242382194179"
-     crossorigin="anonymous"></script>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6466242382194179"
-     crossorigin="anonymous"></script>
-     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Been's Hub</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Beenshub V2..??</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
   <style>
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #006400; /* Darker green */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #004d00; /* Even darker on hover */
-}
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #vanta-bg {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      color: #39ff14;
+      text-align: center;
+      font-size: 2rem;
+      font-family: sans-serif;
+      text-shadow: 0 0 12px #000, 0 0 24px #000, 0 0 36px #000, 0 0 48px #39ff14, 0 0 64px #39ff14;
+      border: 2px solid #000;
+      padding: 0.5em 2em;
+      border-radius: 12px;
+      background: rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Been's Hub</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="g.html">Games</a></li>
-        <li><a href="search.html">Proxy</a></li>
-        <li><a href="links.html">Links</a></li>
-        <li><a href="partners.html">Partners</a></li>
-        <li><a href="https://discord.gg/9NWpPmSS" target="_blank" class="discord-button">Discord</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home" class="section">
-      <div class="hero">
-        <h2>Been's Games Hub</h2>
-        <p>Made by been on <a href="https://discord.gg/sNP3h6qzba" target="_blank" rel="noopener noreferrer">discord</a></p>
-      </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Been's Hub. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <div id="vanta-bg"></div>
+  <div class="content">
+    Coming soon...
+  </div>
+  <script>
+    VANTA.CLOUDS({
+      el: "#vanta-bg",
+      skyColor: 0x0a2e0a,
+      cloudColor: 0x145214,
+      cloudShadowColor: 0x0a1f0a,
+      sunColor: 0x1aff00,
+      sunGlareColor: 0x39ff14,
+      sunlightColor: 0x39ff14,
+      speed: 1.2
+    })
+  </script>
 </body>
 </html>
